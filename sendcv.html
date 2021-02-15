@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+    <title>Kinory HR Homepage</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+    <meta name="keywords" content="נורית כנורי,ברי כנורי,נורית כינורי,ברי כינורי,שירותי ,kinory nurit, kinory, השמה בביטוח,עובדים מקצועיים,כח אדם,כוח אדם,ביטוח חיים, חיתום אלמנטרי,תביעות,עורכי דין,כספים,שיווק,אנשי מחשב,עובדים כלליים,גיוס והשמה של אקדמאים,גיוס והשמת בכירים,מאגר משרות,ייעוץ,משרה,חבויות,דירות,רכבים תעשיה,נזיקין,יועצים פיננסיים,כלכלנים,רואי חשבון,מבקרי פנים,אנשי גבייה,הנהלת חשבונות,מנהלי תיקים,אנשי שיווק ומכירות,בעלי ידע בביטוח,מזכירות,קלדניות,מרכזניות,פקידי תיקיה וארכיב,בוגרי אוניברסיטה, בוגרי מכללה, תלמידי המסלול האקדמי בביטוח,חברות ביטוח,בנקים,קרנות פנסיה,נשים,גברים,אנשי תפעול,מנהלי תיקים פנסיוניים,בעלי רישיון,חתמים רפואיים,אקטוארים, בודקי תוכנה, QA,השמה ביטוח, ביטוח השמה,מגדירי דרישות,שמאים,עובדים,שירות,קריירה,מעסיק,השמה ביטוח, ביטוח השמה, עבודה,ג'וב">
+    <meta name="description" content="Nurit Kinory, Insurance Human Resources Agency Webpage">
+</head>
+<body style="background-color: #F2EDDF">
+    <header>
+        <div class="bar_stuff">
+            <a href="index.html"><img src="nk logo.png" class="logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="contact.html"><b>צור קשר</b></a></li>
+                    <li><a href="jobs.html"><b>משרות</b></a></li>
+                    <li><a href="about.html"><b>אודותינו</b></a></li>
+                    <li><a href="index.html"><b>דף הבית</b></a></li>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+    <main>
+        <form id="myForm">
+            <H1 id="send_cv_h1">שליחת קורות חיים</H1>
+            <input type="file" id="inpFile"><br>
+            <button type="submit" id="submitFile">העלה קו"ח</button>
+
+            <script>
+                const myForm = document.getElementById("myForm")
+                const inpFile = document.getElementById("inpFile")
+                console.log(inpFile)
+                inpFile.addEventListener("change", function(){
+                    console.log(inpFile.files)
+                })
+            </script>
+        </form>
+
+    </main>
+    <footer dir="rtl">
+        <div class="flex_container">
+            <section>
+                <div class="footer_line">
+                    טלפון: 077-6046030
+                </div>
+                <div class="footer_line">
+                    אימייל: nurit@kinory.co.il
+                </div>
+                <div class="footer_line">
+                    לשליחת קו"ח: cv@kinory.co.il
+                </div>           
+            </section>
+            <section>
+                <div class="footer_line">
+                    עיצוב: אסא כנורי
+                </div>
+                <div class="footer_line">
+                    תמונה: לינק לרישיון תמונה
+                </div>
+                <div class="footer_line">
+                    בדיקה
+                </div>           
+            </section>
+        </div>
+    </footer>
+    
+
+    <script src=""></script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+
+@font-face {
+    font-family: "Gveret Levin AlefAlefAlef";
+    src: url("GveretLevinAlefAlefAlef-Regular.otf") format("opentype");
+}
+
+body{
+    font-family: 'Arimo';
+    margin: 0;
+    display: block;
+}
+
+
+
+header::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav{
+    margin-left: 20vw;
+
+}
+.logo{
+    position: absolute;
+    padding-top: 30px;
+    width: 240px;
+    margin-left: 66vw;
+    display: block;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    font-size: 1.5vw;
+    list-style: none;
+}
+
+nav li{
+    display: inline-block;
+    margin-left: 7vw;
+    padding-right: 1vw;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    position: relative;
+}
+nav a{
+    color: #444;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+nav a:hover{
+    color: rgb(85, 34, 20);
+}
+nav a ::before{
+    content: "";
+    display: block;
+    height: 0.4vw;
+    right: 0.48vw;
+    width: 100%;
+    background-color: rgb(85, 34, 20);
+    position: absolute;
+    bottom: 2%;
+    transform: scaleX(0);
+    transition: transform ease-in-out 250ms;
+}
+nav a :hover::before{
+    transform: scaleX(1);
+}
+
+/* .bar_stuff{
+    margin-right: 17vw;
+    margin-top: 0px;
+    
+} */
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: auto;
+}
+.container img{
+    height: auto;
+    width: 100%;
+}
+.upper_center {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.upper_center .name_headline{
+    font-size: 4vw;
+    font-family: 'Gveret Levin AlefAlefAlef';
+}
+.centered{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 2.5vw;
+    transform: translate(-50%, -50%);
+}
+.rectangle{
+    width: 20%;
+    height: 17%;
+    position: absolute;
+    left: 40%;
+    top: 60%;
+    background: #7e1919;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.4);
+    border-radius: 80px;
+
+}
+.rectangle>H1{
+    position: relative;
+    padding-left: 0%;
+    padding-top: 0%;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    font-size: 2vw;
+    
+    color: white;
+}
+
+.professions{
+    font-size: 24px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.centered_prof{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.professions h2{
+    text-align: center;
+    font-size: 2vw;
+}
+.professions img{
+    padding-right: 2vw;
+}
+#first_img_line{
+    padding-left: 2vw;
+}
+#sec_img_line{
+    padding-left: 7.5vw;
+}
+
+.section1{
+    position: relative;
+    margin-top: 3.5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+
+}
+.section1 h2{
+    font-size: 2vw;
+}
+.section1 p{
+    font-size: 1.5vw;
+}
+
+.rectangle2{
+    position: relative;
+    left: 43.7%;
+    width: 12.3%;
+    height: 3.1vw;
+    background: #502008;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px #B02E2E;
+}
+.rectangle2>H1{
+    position: relative;
+    bottom: 0.16vw;
+    font-size: 1.2vw;
+    text-align: center;
+    color: white;
+}
+#no_decoration{
+    text-decoration: none;
+}
+
+.section2{
+    position: relative;
+    margin-left: 20%;
+    margin-right: 20%;
+
+}
+#section2_head{
+    text-align: center;
+    font-size: 2vw;
+
+}
+#slider{
+    overflow: hidden;
+}
+#slider figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+#slider figure img{
+    float: left;
+    width: 20%;
+}
+@keyframes slider{
+    0% {
+        left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+
+}
+
+.section2 p{
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    width: 100%;
+    
+}
+main {
+    min-height: calc(100vh - 280px);
+}
+.flex_container{
+    display: flex;
+    margin-left: 20%;
+    margin-right: 20%;
+    justify-content: space-evenly;
+    
+}
+footer section{
+    padding-right: 1.2vw;
+    text-align: center;
+}
+.footer_line{
+    padding-top: 0.6vw;
+    padding-bottom: 0.6vw;
+}
+
+.jobs_section{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 20%;
+    margin-right: 20%;
+    
+}
+
+.column{
+    flex: 1;
+}
+.job{
+    position: relative;
+    padding-top: 1.6vh;
+    text-align: center;
+    margin: 5%;
+    background-color: rgb(214, 192, 192);
+    height: 22vw;
+    padding-bottom: 1.4vh;
+    border: 0.1vw solid black;
+  
+}
+.job p{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.send_cv{
+    text-decoration: none;
+}
+
+.job button{
+    position: absolute;
+    border: 0.2vw solid black;
+    font-size: 1.2vw;
+    background-color: burlywood;
+    left: 30%;
+    bottom: 0.6vw;
+    transition: 1s;
+}
+.job button:hover{
+    background-color: rgb(255, 169, 64);
+    cursor: pointer;
+}
+#myForm{
+    text-align: center;
+    margin-bottom: 5em;
+}
+
+
+.job-master {
+    margin-left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+}
+
+.contact-details {
+    margin-left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    direction:rtl;
+    width: 50%;
+    outline: 2px solid black;
+    background-color: #ccc8c8;
+}
+
