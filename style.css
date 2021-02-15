@@ -81,7 +81,7 @@ nav a :hover::before{
     height: auto;
 }
 .container img{
-    height: auto;
+    height: 70vh;
     width: 100%;
 }
 .upper_center {
@@ -103,15 +103,18 @@ nav a :hover::before{
 }
 .rectangle{
     width: 20%;
-    height: 17%;
+    height: 10vh;
     position: absolute;
     left: 40%;
     top: 60%;
     background: #7e1919;
     box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.4);
     border-radius: 80px;
+    max-height: 8vw;
 
 }
+
+
 .rectangle>H1{
     position: relative;
     padding-left: 0%;
@@ -277,9 +280,10 @@ footer section{
     text-align: center;
     margin: 5%;
     background-color: rgb(214, 192, 192);
-    height: 22vw;
+    min-height: 30vw;
     padding-bottom: 1.4vh;
     border: 0.1vw solid black;
+    /* font-size: 1.8vh; */
   
 }
 .job p{
@@ -298,6 +302,7 @@ footer section{
     left: 30%;
     bottom: 0.6vw;
     transition: 1s;
+    margin-top: 10px;
 }
 .job button:hover{
     background-color: rgb(255, 169, 64);
