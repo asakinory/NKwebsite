@@ -180,6 +180,10 @@ nav a :hover::before{
     text-align: center;
     font-size: 1.2em;
 }
+.professions p {
+    font-size: 1em;
+    text-align: center;
+}
 
 
 @media screen and (max-width: 800px){
@@ -223,12 +227,13 @@ nav a :hover::before{
     padding-left: 4px;
     padding-right: 4px;
 }
-.rectangle2>H1{
+.rectangle2{
     position: relative;
     /* bottom: 0.8vw; */
     font-size: 1.5em;
     text-align: center;
     color: white;
+    padding: 8px;
 }
 #no_decoration{
     text-decoration: none;
