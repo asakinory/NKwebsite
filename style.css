@@ -54,8 +54,8 @@ nav li{
 }
 @media screen and (max-width: 700px){
     nav li{
-        margin-left: 5vw;
-        font-size: 0.8em;
+        margin-left: 3vw;
+        font-size: 0.6em;
     }
 
 }
@@ -110,13 +110,25 @@ nav a :hover::before{
     font-family: 'Gveret Levin AlefAlefAlef';
 }
 
+
 .strokeme {
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    font-size: 1.5em;
     margin-top: 10px;
+    font-size: 1.8em;
 
   }
+
+  @media screen and (max-width: 800px){
+    .upper_center .name_headline{
+        font-size: 2.5em;
+    }
+    .strokeme {
+
+        font-size: 1.3em;
+    
+      }
+}
 .centered{
     position: absolute;
     top: 40%;
@@ -141,10 +153,16 @@ nav a :hover::before{
 .rectangle>H1{
     position: relative;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-    font-size: 2em;
+    font-size: 1.8em;
     color: white;
     margin-top: 7%;
     margin: 0.5em;
+}
+
+@media screen and (max-width: 800px) {
+    .rectangle>H1{
+        font-size: 1.2em;
+    }
 }
 
 .professions{
@@ -160,7 +178,7 @@ nav a :hover::before{
 }
 .professions h2{
     text-align: center;
-    font-size: 1.8em;
+    font-size: 1.2em;
 }
 
 
@@ -322,6 +340,15 @@ footer section{
     border: 0.1vw solid black;
 
   
+}
+
+@media screen and (max-width: 760px) {
+    .section1 {
+        font-size: 1em;
+    }
+    .section2 {
+        font-size: 1em;
+    }
 }
 .job p{
     margin-left: 5%;
