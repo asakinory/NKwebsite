@@ -8,6 +8,7 @@ body{
     font-family: 'Arimo';
     margin: 0;
     display: block;
+    font-size: 16px;
 }
 
 
@@ -25,17 +26,23 @@ nav{
 .logo{
     position: absolute;
     padding-top: 2vw;
-    width: 240px;
     margin-left: 66vw;
     display: block;
     max-width: 15vw;
 }
+@media screen and (max-width: 992px){
+    .logo{
+        margin-left: 75vw;
+        max-width: 20vw;
+    }
+}
 nav ul{
     margin: 0;
     padding: 0;
-    font-size: 1.5vw;
+    font-size: 1.5em;
     list-style: none;
 }
+
 
 nav li{
     display: inline-block;
@@ -44,6 +51,13 @@ nav li{
     padding-top: 3vw;
     padding-bottom: 3vw;
     position: relative;
+}
+@media screen and (max-width: 700px){
+    nav li{
+        margin-left: 5vw;
+        font-size: 0.8em;
+    }
+
 }
 nav a{
     color: #444;
@@ -92,31 +106,34 @@ nav a :hover::before{
     transform: translate(-50%, -50%);
 }
 .upper_center .name_headline{
-    font-size: 4vw;
+    font-size: 4em;
     font-family: 'Gveret Levin AlefAlefAlef';
 }
 
 .strokeme {
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-size: 1.5em;
+    margin-top: 10px;
+
   }
 .centered{
     position: absolute;
     top: 40%;
     left: 50%;
-    font-size: 2.5vw;
     transform: translate(-50%, -50%);
 }
 .rectangle{
-    width: 20%;
-    height: 80px;
+    width: fit-content;
     position: absolute;
-    left: 40%;
-    top: 60%;
+    top: 64%;
     background: #7e1919;
     box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.4);
     border-radius: 80px;
-    max-height: 8vw;
+    /* max-height: 8vw; */
+    padding-top: 3px;
+    padding-bottom: 3px;
+    /* height: fit-content; */
 
 }
 
@@ -124,13 +141,14 @@ nav a :hover::before{
 .rectangle>H1{
     position: relative;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-    font-size: 2vw;
+    font-size: 2em;
     color: white;
     margin-top: 7%;
+    margin: 0.5em;
 }
 
 .professions{
-    font-size: 24px;
+    font-size: 1.5em;
     margin-left: 20%;
     margin-right: 20%;
 }
@@ -142,7 +160,7 @@ nav a :hover::before{
 }
 .professions h2{
     text-align: center;
-    font-size: 2vw;
+    font-size: 1.8em;
 }
 .professions img{
     padding-right: 2vw;
@@ -163,26 +181,27 @@ nav a :hover::before{
 
 }
 .section1 h2{
-    font-size: 2vw;
+    font-size: 1.8em;
 }
 .section1 p{
-    font-size: 1.5vw;
+    font-size: 1.5em;
 }
 
 .rectangle2{
     position: relative;
-    left: 43.7%;
-    width: 12.3%;
-    height: 3.1vw;
+    height: fit-content;
+    width: fit-content;
     background: #502008;
     border: 2px solid #000000;
     box-sizing: border-box;
     box-shadow: 0px 4px 4px #B02E2E;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 .rectangle2>H1{
     position: relative;
-    bottom: 0.16vw;
-    font-size: 1.2vw;
+    /* bottom: 0.8vw; */
+    font-size: 1.5em;
     text-align: center;
     color: white;
 }
@@ -198,7 +217,7 @@ nav a :hover::before{
 }
 #section2_head{
     text-align: center;
-    font-size: 2vw;
+    font-size: 1.5em;
 
 }
 #slider{
@@ -239,7 +258,7 @@ nav a :hover::before{
 
 .section2 p{
     text-align: center;
-    font-size: 1.5vw;
+    font-size: 1.5em;
 }
 
 footer {
@@ -272,7 +291,14 @@ footer section{
     justify-content: space-evenly;
     margin-left: 20%;
     margin-right: 20%;
-    
+}
+@media screen and (max-width: 992px){
+    .jobs_section{
+        display: initial;
+        justify-content: space-evenly;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
 }
 
 .column{
@@ -284,10 +310,10 @@ footer section{
     text-align: center;
     margin: 5%;
     background-color: rgb(214, 192, 192);
-    min-height: 30vw;
+    min-height: 24vw;
     padding-bottom: 1.4vh;
     border: 0.1vw solid black;
-    /* font-size: 1.8vh; */
+
   
 }
 .job p{
@@ -301,7 +327,7 @@ footer section{
 .job button{
     position: absolute;
     border: 0.2vw solid black;
-    font-size: 1.2vw;
+    font-size: 1.2em;
     background-color: burlywood;
     left: 30%;
     bottom: 0.6vw;
