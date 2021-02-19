@@ -12,7 +12,7 @@
     <meta name="description" content="Nurit Kinory, Insurance Human Resources Agency Webpage">
 </head>
 <body style="background-color: #F2EDDF">
-    <a href="index.html"><img src="nk logo.png" class="logo"></a>
+    <a href="index.html"><img src="nk logo.png" class="logo" alt="נורית כנורי שרותי השמה בתחום הביטוח - נווט לדף הבית"></a>
 
     <header>
         <div class="bar_stuff">
@@ -26,6 +26,19 @@
             </nav>
         </div>
     </header>
+    <div class="accessability">
+        <div class="div">
+            <a href="accessability.html"><img src="accessability.png" alt="accessability icon"></a>
+        </div>
+        <div class="div">
+            <button id="fontSizeBtn">הגדל פונט</button>
+
+        </div>
+        <div>
+            <button id="contrastBtn">העלה ניגודיות</button>
+        </div>
+
+    </div>
     <main>
         <div class="contact-details">
             <br><br>
@@ -70,6 +83,38 @@
     </footer> -->
     
 
-    <script src=""></script>
+    <script>
+        let contrastFlag = false;
+        let fontFlag = false;
+
+        let bodyElement = document.querySelector('body');
+        let fontBtn = document.getElementById('fontSizeBtn');
+
+        fontBtn.addEventListener('click', () => {
+            if(fontFlag) {
+                fontBtn.innerHTML = 'הגדל פונט'
+                bodyElement.style.fontSize = '16px';
+                fontFlag = false;
+            }
+            else{
+                fontBtn.innerHTML = 'הקטן פונט';
+                bodyElement.style.fontSize = '32px';
+                fontFlag = true;
+            }
+        })
+
+        contrastBtn.addEventListener('click', () => {
+            if(contrastFlag) {
+                contrastBtn.innerHTML = 'העלה ניגודיות'
+                bodyElement.style.filter = 'contrast(100%)';
+                contrastFlag = false;
+            }
+            else{
+                contrastBtn.innerHTML = 'הורד ניגודיות';
+                bodyElement.style.filter = 'contrast(200%)';
+                contrastFlag = true;
+            }
+        })
+    </script>
 </body>
 </html>

@@ -12,7 +12,7 @@
     <meta name="description" content="Nurit Kinory, Insurance Human Resources Agency Webpage">
 </head>
 <body style="background-color: #F2EDDF">
-    <a href="index.html"><img src="nk logo.png" class="logo" alt= "נורית כנורי - לוגו"></a>
+    <a href="index.html"><img src="nk logo.png" class="logo" alt="נורית כנורי שרותי השמה בתחום הביטוח - נווט לדף הבית"></a>
 
     <header>
         <div class="bar_stuff">
@@ -26,12 +26,25 @@
             </nav>
         </div>
     </header>
+    <div class="accessability">
+        <div class="div">
+            <a href="accessability.html"><img src="accessability.png" alt="accessability icon"></a>
+        </div>
+        <div class="div">
+            <button id="fontSizeBtn">הגדל פונט</button>
+
+        </div>
+        <div>
+            <button id="contrastBtn">העלה ניגודיות</button>
+        </div>
+
+    </div>
     <main>
-        <h2 id="section2_head">משרות אחרונות</h2>
+        <h1 id="section2_head">משרות אחרונות</h1>
         <section class="jobs_section" dir="rtl">
             <div class="column">
                 <div class="job">
-                    <h3>חתם\ת עסקים גדולים</h3>
+                    <h2>חתם\ת עסקים גדולים</h2>
                     <p>
                         דרוש/ה חתם/ת עסקים גדולים מנוסה
                         <p>
@@ -40,8 +53,8 @@
                         </p>
                         <p>
                             דרישות:                        
-                            נדרש ניסיון קודם בחיתום עסקים בחברת ביטוח ו/או סוכנות ביטוח
-                            תואר ראשון במנה"ע/כלכלה/חשבונאות/משפטים/ביטוח.
+                            נדרש ניסיון קודם בחיתום עסקים בחברת ביטוח ו\או סוכנות ביטוח
+                            תואר ראשון במנה"ע\כלכלה\חשבונאות\משפטים\ביטוח.
                             *שליטה בשפה אנגלית<br>
                             שנות נסיון: 1-2 שנים
                         </p>
@@ -51,7 +64,7 @@
 
                 </div>
                 <div class="job" dir="rtl">
-                    <h3>דרוש/ה סוכן/ת פנסיוני לייעוץ במשרד יועצים/ות</h3>
+                    <h3>דרוש\ה סוכן\ת פנסיוני לייעוץ במשרד יועצים\ות</h3>
                     <p>
                         דרוש/ה סוכן/ת פנסיוני לעבודת ייעוץ
                         <p>
@@ -147,14 +160,48 @@
                     עיצוב: אסא כנורי
                 </div>
                 <div class="footer_line">
-                    רישיון תמונה:<br> <a href="http://www.freepik.com">Designed by master1305 / Freepik</a> 
+                    <a href="index.html">נווט לדף הבית</a> 
                 </div>
+                <div class="footer_line">
+                    <a href="accessability.html">הצהרת נגישות</a> 
          
             </section>
         </div>
     </footer>
     
 
-    <script src=""></script>
+    <script>
+        let contrastFlag = false;
+        let fontFlag = false;
+
+        let bodyElement = document.querySelector('body');
+        let fontBtn = document.getElementById('fontSizeBtn');
+
+        fontBtn.addEventListener('click', () => {
+            if(fontFlag) {
+                fontBtn.innerHTML = 'הגדל פונט'
+                bodyElement.style.fontSize = '16px';
+                fontFlag = false;
+            }
+            else{
+                fontBtn.innerHTML = 'הקטן פונט';
+                bodyElement.style.fontSize = '32px';
+                fontFlag = true;
+            }
+        })
+
+        contrastBtn.addEventListener('click', () => {
+            if(contrastFlag) {
+                contrastBtn.innerHTML = 'העלה ניגודיות'
+                bodyElement.style.filter = 'contrast(100%)';
+                contrastFlag = false;
+            }
+            else{
+                contrastBtn.innerHTML = 'הורד ניגודיות';
+                bodyElement.style.filter = 'contrast(200%)';
+                contrastFlag = true;
+            }
+        })
+    </script>
 </body>
 </html>

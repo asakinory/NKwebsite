@@ -8,9 +8,46 @@ body{
     font-family: 'Arimo';
     margin: 0;
     display: block;
-    font-size: 16px;
 }
 
+
+.accessability {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    margin-left: 0;
+}
+
+
+
+.accessability img {
+    width: 50px;
+    height: 48px;
+    position: fixed;
+    top: 0;
+    z-index: 8;
+    border: solid 1px black;
+    font-size: 1em;
+}
+.accessability button {
+    min-width: 50px;
+    min-height: 48px;
+    position: fixed;
+    top: 0;
+    z-index: 8;
+    font-size: 1em;
+
+}
+
+@media screen and (max-width: 800px){
+    .accessability img{
+        top:40px
+    }
+    .accessability button{
+        top:40px
+    }
+
+}
 
 
 header::after{
@@ -20,19 +57,18 @@ header::after{
 }
 
 nav{
-    margin-left: 20vw;
+    margin-left: 25vw;
 
 }
 .logo{
     position: absolute;
     padding-top: 2vw;
-    margin-left: 66vw;
+    margin-left: 78vw;
     display: block;
     max-width: 15vw;
 }
 @media screen and (max-width: 992px){
     .logo{
-        margin-left: 75vw;
         max-width: 20vw;
     }
 }
@@ -310,6 +346,9 @@ main {
 footer section{
     padding-right: 1.2vw;
     text-align: center;
+}
+footer a{
+    color: white;
 }
 .footer_line{
     padding-top: 0.6vw;

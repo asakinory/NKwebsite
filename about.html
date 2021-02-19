@@ -12,7 +12,7 @@
     <meta name="description" content="Nurit Kinory, Insurance Human Resources Agency Webpage">
 </head>
 <body style="background-color: #F2EDDF">
-    <a href="index.html"><img src="nk logo.png" class="logo"></a>
+    <a href="index.html"><img src="nk logo.png" class="logo" alt="נורית כנורי שרותי השמה בתחום הביטוח - נווט לדף הבית"></a>
 
     <header>
         <div class="bar_stuff">
@@ -26,9 +26,22 @@
             </nav>
         </div>
     </header>
+    <div class="accessability">
+        <div class="div">
+            <a href="accessability.html"><img src="accessability.png" alt="accessability icon"></a>
+        </div>
+        <div class="div">
+            <button id="fontSizeBtn">הגדל פונט</button>
+
+        </div>
+        <div>
+            <button id="contrastBtn">העלה ניגודיות</button>
+        </div>
+
+    </div>
     <main>
         <section class="section1">
-            <h2>ניסיון, ידע, הצלחה</h2>
+            <h1>ניסיון, ידע, הצלחה</h1>
             <p dir="rtl">
                 עם יותר מ- 20 שנות ניסיון והיכרות מעמיקה עם עולם הביטוח, אנו מציעים שירות מעולה בבניית קריירה והשמת עובדים מקצועיים.<br>
                 אנו מציעים לפונים אלינו מאגר משרות גדול ומגוון, ייעוץ ותמיכה בקידום הקריירה, טיפול אישי ודיסקרטיות מלאה.<br>
@@ -62,12 +75,46 @@
                     עיצוב: אסא כנורי
                 </div>
                 <div class="footer_line">
-                    רישיון תמונה:<br> <a href="http://www.freepik.com">Designed by master1305 / Freepik</a> 
+                    <a href="index.html">נווט לדף הבית</a> 
                 </div>
+                <div class="footer_line">
+                    <a href="accessability.html">הצהרת נגישות</a> 
          
             </section>
         </div>
     </footer>  
-    <script src=""></script>
+    <script>
+        let contrastFlag = false;
+        let fontFlag = false;
+
+        let bodyElement = document.querySelector('body');
+        let fontBtn = document.getElementById('fontSizeBtn');
+
+        fontBtn.addEventListener('click', () => {
+            if(fontFlag) {
+                fontBtn.innerHTML = 'הגדל פונט'
+                bodyElement.style.fontSize = '16px';
+                fontFlag = false;
+            }
+            else{
+                fontBtn.innerHTML = 'הקטן פונט';
+                bodyElement.style.fontSize = '32px';
+                fontFlag = true;
+            }
+        })
+
+        contrastBtn.addEventListener('click', () => {
+            if(contrastFlag) {
+                contrastBtn.innerHTML = 'העלה ניגודיות'
+                bodyElement.style.filter = 'contrast(100%)';
+                contrastFlag = false;
+            }
+            else{
+                contrastBtn.innerHTML = 'הורד ניגודיות';
+                bodyElement.style.filter = 'contrast(200%)';
+                contrastFlag = true;
+            }
+        })
+    </script>
 </body>
 </html>
