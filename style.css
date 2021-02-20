@@ -30,6 +30,7 @@ body{
     font-size: 1em;
 }
 .accessability button {
+    
     min-width: 50px;
     min-height: 48px;
     position: fixed;
@@ -43,10 +44,21 @@ body{
     .accessability img{
         top:40px
     }
-    .accessability button{
-        top:40px
+    #fontSizeBtn{
+        top:80px;
+        font-size: 0.9em;
+        padding: 0;
     }
+    #contrastBtn{
+        top:120px;
+        font-size: 0.9em;
+        padding: 0;
 
+
+    }
+    .accessability {
+        flex-direction: column;
+    }
 }
 
 
