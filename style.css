@@ -22,11 +22,11 @@ body{
 
 .accessability img {
     width: 4vw;
-    height: 48px;
+    height: 46px;
     position: absolute;
     top: 0;
     z-index: 8;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     font-size: 1em;
 }
 .accessability button {
@@ -194,6 +194,7 @@ nav a :hover::before{
     padding-top: 3px;
     padding-bottom: 3px;
     /* height: fit-content; */
+    font-family: 'Alef', sans-serif;
 
 }
 
@@ -282,6 +283,7 @@ nav a :hover::before{
     text-align: center;
     color: white;
     padding: 8px;
+    font-family: 'Alef', sans-serif;
 }
 #no_decoration{
     text-decoration: none;
