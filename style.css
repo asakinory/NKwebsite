@@ -20,9 +20,9 @@ body{
 
 
 
-.accessability img {
-    width: 4vw;
-    height: 46px;
+.accessability-img {
+    width: 48px;
+    height: 48px;
     position: absolute;
     top: 0;
     z-index: 8;
@@ -31,27 +31,39 @@ body{
 }
 .accessability button {
     
-    min-width: 50px;
-    min-height: 48px;
+    /* min-width: 50px;
+    min-height: 48px; */
     position: absolute;
     top: 0;
     z-index: 8;
-    font-size: 1em;
-
+    padding: 0;
 }
 
+.accessability button img {
+    width: 48px;
+    height: 48px;
+}
+
+
+#fontSizeBtn{
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+#contrastBtn{
+    border: 1px solid transparent;
+    background-color: transparent;
+}
 @media screen and (max-width: 800px){
     .accessability img{
-        top:40px
+        top: 0px
     }
     #fontSizeBtn{
-        top:80px;
-        font-size: 0.9em;
+        top:40px;
         padding: 0;
     }
     #contrastBtn{
-        top:120px;
-        font-size: 0.9em;
+        top:80px;
         padding: 0;
 
 
