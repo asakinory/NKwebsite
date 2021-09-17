@@ -405,12 +405,12 @@ footer a{
 }
 .job{
     position: relative;
-    padding-top: 1.6vh;
+    /* padding-top: 1.6vh; */
     text-align: center;
-    margin: 5%;
+    margin: 5% 5% 0% 5%;
     background-color: rgb(214, 192, 192);
     min-height: 24vw;
-    padding-bottom: 1.4vh;
+    /* padding-bottom: 1.4vh; */
     border: 0.1vw solid black;
 
   
