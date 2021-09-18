@@ -26,15 +26,23 @@
 </div>
 </header>
 <div class="accessability">
-<div class="div">
-<a href="accessability.html"><img alt="accessability icon" class="accessability-img" src="accessability.png"/></a>
-</div>
-<div class="div">
-<button id="fontSizeBtn"><img src="increase-font-size-button.png"/></button>
-</div>
-<div>
-<button id="contrastBtn"><img src="contrast-img.png"/></button>
-</div>
+    <div class="div">
+        <!-- <a href="accessability.html"><img src="accessability.png" class="accessability-img" alt="accessability icon"></a> -->
+        <button id="accessibilityBtn"><img src="accessability.png" class="accessability-img" alt="accessability icon"></button>
+
+    </div>
+
+    <div class="div">
+        <button id="fontSizeBtn"><img src="increase-font-size-button.png"></button>
+
+    </div>
+    <div>
+        <button id="contrastBtn"><img src="contrast-img.png"></button>
+    </div>
+    <div>
+        <a href="accessability.html"><button id="accessabilityStatement">הצהרת נגישות</button></a>
+    </div>
+
 </div>
 <main>
 <h1 id="section2_head">משרות אחרונות</h1>
@@ -131,40 +139,7 @@
 </div></section>
 </div>
 </footer>
-<script>
-        let contrastFlag = false;
-        let fontFlag = false;
+<script src="script.js"></script>
 
-        let bodyElement = document.querySelector('body');
-        let fontBtn = document.getElementById('fontSizeBtn');
-
-        fontBtn.addEventListener('click', () => {
-            if(fontFlag) {
-                bodyElement.style.fontSize = '16px';
-                fontFlag = false;
-                fontBtn.style.border = "0px solid black"
-
-            }
-            else{
-                bodyElement.style.fontSize = '32px';
-                fontFlag = true;
-                fontBtn.style.border = "2px solid black"
-            }
-        })
-
-        contrastBtn.addEventListener('click', () => {
-            if(contrastFlag) {
-                bodyElement.style.filter = 'contrast(100%)';
-                contrastFlag = false;
-                contrastBtn.style.border = "0px solid black"
-            }
-            else{
-                bodyElement.style.filter = 'contrast(200%)';
-                contrastFlag = true;
-                contrastBtn.style.border = "2px solid black"
-
-            }
-        })
-    </script>
 </body>
 </html>

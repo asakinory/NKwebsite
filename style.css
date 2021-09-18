@@ -15,63 +15,72 @@ body{
     display: flex;
     justify-content: space-between;
     width: 150px;
-    margin-left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 8;
+
+    /* margin-left: 0; */
 }
 
 
-
+/* 
 .accessability-img {
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
     position: absolute;
     top: 0;
     z-index: 8;
     /* border: solid 1px black; */
-    font-size: 1em;
-}
+    /* font-size: 1em; */
+/* } */
+
 .accessability button {
     
     /* min-width: 50px;
     min-height: 48px; */
-    position: absolute;
-    top: 0;
-    z-index: 8;
+
+    /* z-index: 8; */
     padding: 0;
+    width: 48px;
+    height: 48px;
+    background-color: transparent;
+    border: 1px solid transparent;
+
+
 }
 
 .accessability button img {
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
 }
 
 
-.accessability button img:hover {
+.accessability button:hover {
     cursor: pointer;
 }
 
 
 #fontSizeBtn{
     border: 1px solid transparent;
-    background-color: transparent;
+    pointer-events: none;
+    display: none;
 }
 
 #contrastBtn{
     border: 1px solid transparent;
-    background-color: transparent;
+    pointer-events: none;
+    display: none;
+}
+
+#accessabilityStatement{
+    text-decoration: underline;
+    text-shadow: 0.5px 0.5px #7c7373;
+    pointer-events: none;
+    display: none;
+
 }
 @media screen and (max-width: 800px){
-    .accessability img{
-        top: 0px
-    }
-    #fontSizeBtn{
-        top:40px;
-        padding: 0;
-    }
-    #contrastBtn{
-        top:80px;
-        padding: 0;
 
-    }
     .accessability {
         flex-direction: column;
     }

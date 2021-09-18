@@ -1,15 +1,14 @@
 @media screen and (max-width: 800px){
-    .accessability img{
-        top: 0px
-    }
+
     #fontSizeBtn{
-        top:40px;
-        padding: 0;
         filter: invert(100%);
     }
     #contrastBtn{
-        top:80px;
-        padding: 0;
+        filter: invert(100%);
+
+    }
+    #accessabilityStatement{
         filter: invert(100%);
     }
+
 }
