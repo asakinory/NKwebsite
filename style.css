@@ -14,7 +14,7 @@ body{
 .accessability {
     display: flex;
     justify-content: space-between;
-    width: 150px;
+    width: 50px;
     position: absolute;
     top: 0;
     z-index: 8;
