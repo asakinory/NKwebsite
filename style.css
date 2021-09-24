@@ -1,4 +1,8 @@
 
+:root {
+    --button-container-width: var(--button-container-width);
+}
+
 @font-face {
     font-family: "Gveret Levin AlefAlefAlef";
     src: url("GveretLevinAlefAlefAlef-Regular.otf") format("opentype");
@@ -14,7 +18,7 @@ body{
 .accessability {
     display: flex;
     justify-content: space-between;
-    width: 50px;
+    width: var(--button-container-width);
     position: absolute;
     top: 0;
     z-index: 8;
@@ -37,12 +41,12 @@ body{
 .accessability button {
     
     /* min-width: 50px;
-    min-height: 48px; */
+    min-height: var(--button-container-width); */
 
     /* z-index: 8; */
     padding: 0;
-    width: 48px;
-    height: 48px;
+    width: var(--button-container-width);
+    height: var(--button-container-width);
     background-color: transparent;
     border: 1px solid transparent;
 
