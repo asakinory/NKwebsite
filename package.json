@@ -1,0 +1,24 @@
+{
+  "name": "nkwebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "gh-pages": "^3.2.3",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asakinory/NKwebsite.git"
+  },
+  "author": "Asa Kinory",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asakinory/NKwebsite/issues"
+  },
+  "homepage": "https://github.com/asakinory/NKwebsite#readme"
+}
