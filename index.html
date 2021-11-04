@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alef&family=Kalam&display=swap" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Alef&family=Kalam&display=swap" rel="stylesheet">  
     <title>נורית כנורי שרותי השמה בביטוח</title>
     <link rel="shortcut icon" type="image/png" href="favicon.png">
@@ -13,23 +13,19 @@
     <meta name="keywords" content="נורית כנורי,ברי כנורי,נורית כינורי,ברי כינורי,שירותי ,kinory nurit, kinory, השמה בביטוח,עובדים מקצועיים,כח אדם,כוח אדם,ביטוח חיים, חיתום אלמנטרי,תביעות,עורכי דין,כספים,שיווק,אנשי מחשב,עובדים כלליים,גיוס והשמה של אקדמאים,גיוס והשמת בכירים,מאגר משרות,ייעוץ,משרה,חבויות,דירות,רכבים תעשיה,נזיקין,יועצים פיננסיים,כלכלנים,רואי חשבון,מבקרי פנים,אנשי גבייה,הנהלת חשבונות,מנהלי תיקים,אנשי שיווק ומכירות,בעלי ידע בביטוח,מזכירות,קלדניות,מרכזניות,פקידי תיקיה וארכיב,בוגרי אוניברסיטה, בוגרי מכללה, תלמידי המסלול האקדמי בביטוח,חברות ביטוח,בנקים,קרנות פנסיה,נשים,גברים,אנשי תפעול,מנהלי תיקים פנסיוניים,בעלי רישיון,חתמים רפואיים,אקטוארים, בודקי תוכנה, QA,השמה ביטוח, ביטוח השמה,מגדירי דרישות,שמאים,עובדים,שירות,קריירה,מעסיק,השמה ביטוח, ביטוח השמה, עבודה,ג'וב">
     <meta name="description" content="Nurit Kinory, Insurance Human Resources Agency Webpage">
 </head>
-<body style="background-color: #F2EDDF">
-    <div class="clickable"></div>
-    <a href="index.html"><img src="nk logo.png" class="logo" alt="נורית כנורי שרותי השמה בתחום הביטוח - נווט לדף הבית"></a>
-
+<body>
     <header>
+        <a href="index.html"><img src="nk logo.png" class="logo" alt="נורית כנורי שרותי השמה בתחום הביטוח - נווט לדף הבית"></a>
+        <nav>
+            <ul>
+                <li><a href="contact.html"><b>צור קשר</b></a></li>
+                <li><a href="jobs.html"><b>משרות</b></a></li>
+                <li><a href="about.html"><b>אודותינו</b></a></li>
 
-        <div class="bar_stuff">
-            <nav>
-                <ul>
-                    <li><a href="contact.html"><b>צור קשר</b></a></li>
-                    <li><a href="jobs.html"><b>משרות</b></a></li>
-                    <li><a href="about.html"><b>אודותינו</b></a></li>
-                </ul>
-                
-            </nav>
-        </div>
+            </ul>  
+        </nav>
     </header>
+
     <div class="accessability">
         <div class="div">
             <!-- <a href="accessability.html"><img src="accessability.png" class="accessability-img" alt="accessability icon"></a> -->
@@ -49,35 +45,71 @@
         </div>
 
     </div>
+    
     <main>
         <div class="container">
-            <img src="newhero.jpg" alt= "" class="hero" style= "width: 100%;">
-            <div class="upper_center"><H1 class="name_headline strokeme">נורית כנורי</H1></div>
-            
-            <div class="centered strokeme">שרותי גיוס והשמה מקצועיים בתחום הביטוח</div>
-            <a href="contact.html"><div class= "rectangle centered"><H1><b>צור איתנו קשר</b></H1></div></div></a>
+            <H1 class="name-headline .white-text-with-stroke">נורית כנורי</H1>
+            <H2 class="moto-headline">שרותי גיוס והשמה מקצועיים בתחום הביטוח</H2>
+            <a href="contact.html"><div class= "call-to-action"><b>צור איתנו קשר</b></div></a>
             
         </div>
         <section class="professions">
             <h2>תחומי ההתמחות שלנו</h2>
-            <img src="prof.png" alt= "תחומי ההתמחות שלנו: תביעות, עורכי דין, כספים, חיתום אלמטרי, ביטוח חיים, שיווק מכירות, אקדמאים, שירות לקוחות, מערכות מידע, בכירים (טקסט מונגש)">
+            <!-- Makes a grid with all the images in the prof-images folder. -->
+            <div class="prof-flex-images-grid">
+                <div class="prof-grid-item">
+                    <img src="prof-images/academaim.png" alt="אקדמאים">
+                    <p>אקדמאים</p>
+                </div>
+                <div class="prof-grid-item">
+                    <img src="prof-images/bchirim.png" alt="בכירים">
+                    <p>בכירים</p>
+                </div>
+                <div class="prof-grid-item">
+                    <img src="prof-images/csafim.png" alt="כספים">
+                    <p>כספים</p>
+                </div>
+                <div class="prof-grid-item">
+                    <img src="prof-images/din.png" alt="עורכי דין">
+                    <p>עורכי דין</p>
+                </div>
+                <div class="prof-grid-item">
+                    <img src="prof-images/elementary.png" alt="אלמנטרי">
+                    <p>אלמנטרי</p>
+                </div>
+                <div class="prof-grid-item">
+                    <img src="prof-images/haim.png" alt="חיים">
+                    <p>חיים</p>
+                </div>
+                <div class="prof-grid-item">
+                    <img src="prof-images/mahshevim.png" alt="מערכות מידע">
+                    <p>מערכות מידע</p>
+                </div>
+                <div class="prof-grid-item">
+                    <img src="prof-images/shirut.png" alt="שרות לקוחות">
+                    <p>שרות לקוחות</p>
+                </div>
+                <div class="prof-grid-item">
+                    <img src="prof-images/shivuk.png" alt="שיווק">
+                    <p>שיווק</p>
+                </div>
+                <div class="prof-grid-item">
+                    <img src="prof-images/tviot.png" alt="תביעות">
+                    <p>תביעות</p>
+                </div>
+            </div>
             <p dir="rtl">
                  אנו מתמחים בהשמה של עובדים מקצועיים בתחום הביטוח מכל הסוגים. <br>
                  חיתום אלמטרי, ביטוח חיים, תביעות, עורכי דין, כספים, שיווק מכירות, אקדמאים, שירות לקוחות, מערכות מידע, בכירים ועוד.
             </p>            
         </section>
-        <br>
-        <br>
-        <!-- <br>
-        <br> -->
         <section class="section1">
             <h2>ניסיון, ידע, הצלחה</h2>
-            <p dir="rtl">
+            <p>
                 עם יותר מ- 20 שנות ניסיון והיכרות מעמיקה עם עולם הביטוח, אנו מציעים שירות מעולה בבניית קריירה והשמת עובדים מקצועיים.<br>
                 אנו מציעים לפונים אלינו מאגר משרות גדול ומגוון, ייעוץ ותמיכה בקידום הקריירה, טיפול אישי ודיסקרטיות מלאה.<br>
                 אנחנו מאמינים בתהליך השמה יסודי הכולל הבנה מלאה של צרכי העובד וצרכי המעסיק כדי ליצור שיתופי פעולה מצליחים.
             </p>
-            <br><br>
 
             <a href="about.html" class="send_cv"><div class= "rectangle2 centered"><b>עוד עלינו</b></div></div></a>
                  
@@ -87,15 +119,11 @@
 
             
             <p dir="rtl">
-                <br>
-                <br>
                  אם הינך מעוניין\ת להיעזר בשירותינו למצוא עובד\ת איכותי\ת ממאגר העובדים הגדול שברשותינו אנו מזמינים אותך ליצור איתנו קשר.
             </p>
-            <br><br>
 
-            <a href="contact.html" id="no_decoration"><div class= "rectangle2 centered"><b>צור קשר</b></div></div></a>
-            <br>
-            <br>
+            <a href="contact.html"><div class= "rectangle2"><b>צור קשר</b></div></div></a>
+
         </section>
 
 

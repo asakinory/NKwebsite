@@ -3,59 +3,111 @@
     --button-container-width: var(--button-container-width);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 @font-face {
     font-family: "Gveret Levin AlefAlefAlef";
     src: url("GveretLevinAlefAlefAlef-Regular.otf") format("opentype");
 }
 
 body{
-    font-family: 'Arimo';
-    margin: 0;
+    font-family: 'Alef';
     display: block;
+    background-color: #F2EDDF;
+    direction: rtl;
+    overflow-x: hidden; /* Hide scrollbar */
+    /* TODO: find why horizontal scrollbar appears on the right side */
 }
 
+a {
+    text-decoration: none;
+}
+
+nav ul{
+    font-size: 1.5rem;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+}
+
+  
+nav ul li{
+    flex-basis: 12rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul{
+        justify-content: flex-end;
+    }
+    nav ul li{
+        flex-basis: 6rem;
+    }
+}
+  
+
+.logo{
+    position: absolute;
+    width: 10rem;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
+
+nav a{
+    color: #444;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Make an animated underline appear when nav item is hovered on */
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    width: 70%;
+    height: 0.1em;
+    background-color: #7e1919;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+  }
+  
+  nav a:hover::after,
+  nav a:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
+  }
 
 .accessability {
+    position: absolute;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: var(--button-container-width);
-    position: absolute;
-    top: 0;
-    z-index: 8;
-
-    /* margin-left: 0; */
+    top: 85vh;
+    right: 1rem;
 }
 
 
-/* 
-.accessability-img {
-    width: 32px;
-    height: 32px;
-    position: absolute;
-    top: 0;
-    z-index: 8;
-    /* border: solid 1px black; */
-    /* font-size: 1em; */
-/* } */
-
 .accessability button {
-    
-    /* min-width: 50px;
-    min-height: var(--button-container-width); */
-
-    /* z-index: 8; */
     padding: 0;
     width: var(--button-container-width);
     height: var(--button-container-width);
     background-color: transparent;
     border: 1px solid transparent;
-
-
 }
 
 .accessability button img {
-    width: 32px;
-    height: 32px;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 
@@ -79,6 +131,7 @@ body{
 #accessabilityStatement{
     text-decoration: underline;
     text-shadow: 0.5px 0.5px #7c7373;
+    font-size: 1rem;
     pointer-events: none;
     display: none;
 
@@ -87,297 +140,130 @@ body{
 
     .accessability {
         flex-direction: column;
+        z-index: 10;
     }
 }
 
-
-header::after{
-    content: '';
-    display: table;
-    clear: both;
-}
-
-nav{
-    margin-left: 25vw;
-
-}
-.logo{
-    position: absolute;
-    padding-top: 2vw;
-    margin-left: 78vw;
-    display: block;
-    max-width: 15vw;
-}
-@media screen and (max-width: 992px){
-    .logo{
-        max-width: 20vw;
-    }
-}
-nav ul{
-    margin: 0;
-    padding: 0;
-    font-size: 1.5em;
-    list-style: none;
-}
-
-
-nav li{
-    display: inline-block;
-    margin-left: 7vw;
-    padding-right: 1vw;
-    padding-top: 3vw;
-    padding-bottom: 3vw;
-    position: relative;
-}
-@media screen and (max-width: 700px){
-    nav li{
-        margin-left: 3vw;
-        font-size: 0.6em;
-    }
-
-}
-nav a{
-    color: #444;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-nav a:hover{
-    color: rgb(85, 34, 20);
-}
-nav a ::before{
-    content: "";
-    display: block;
-    height: 0.4vw;
-    right: 0.48vw;
-    width: 100%;
-    background-color: rgb(85, 34, 20);
-    position: absolute;
-    bottom: 2%;
-    transform: scaleX(0);
-    transition: transform ease-in-out 250ms;
-}
-nav a :hover::before{
-    transform: scaleX(1);
-}
-
-/* .bar_stuff{
-    margin-right: 17vw;
-    margin-top: 0px;
-    
-} */
 .container {
-    position: relative;
     text-align: center;
     color: white;
     width: 100%;
-    height: auto;
-}
-.container img{
     height: 70vh;
-    width: 100%;
+    display: flex;
+    background-image: url(newhero.jpg);
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.upper_center {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.upper_center .name_headline{
-    font-size: 4em;
+
+.name-headline{
+    font-size: 4rem;
     font-family: 'Gveret Levin AlefAlefAlef';
+    margin: 0;
 }
 
 
-.strokeme {
+.white-text-with-stroke {
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    margin-top: 10px;
-    font-size: 1.8em;
-
   }
 
   @media screen and (max-width: 800px){
-    .upper_center .name_headline{
-        font-size: 2.5em;
+    .name-headline{
+        font-size: 2.5rem;
     }
-    .strokeme {
+}
 
-        font-size: 1.3em;
-    
-      }
+.moto-headline {
+    margin: 3rem;
+    font-family: 'Gveret Levin AlefAlefAlef';
+    font-size: 2rem;
+
 }
-.centered{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.rectangle{
-    width: fit-content;
-    position: absolute;
-    top: 64%;
+
+.call-to-action{
     background: #7e1919;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.4);
-    border-radius: 80px;
-    /* max-height: 8vw; */
-    padding-top: 3px;
-    padding-bottom: 3px;
-    /* height: fit-content; */
+    font-size: 2rem;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 8px;
+    padding-left: 8px;
     font-family: 'Alef', sans-serif;
-
-}
-
-
-.rectangle>H1{
-    position: relative;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-    font-size: 1.8em;
     color: white;
-    margin-top: 7%;
-    margin: 0.5em;
 }
+
+
 
 @media screen and (max-width: 800px) {
-    .rectangle>H1{
-        font-size: 1.2em;
+    .call-to-action>H1{
+        font-size: 1.2rem;
     }
 }
 
-.professions{
-    font-size: 1.5em;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-.professions img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-}
-.professions h2{
-    text-align: center;
-    font-size: 1.2em;
-}
-.professions p {
-    font-size: 1em;
-    text-align: center;
+.prof-flex-images-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
+.prof-flex-images-grid img {
+    width: 90%;
+    border-radius: 10%;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+}
 
-@media screen and (max-width: 800px){
-    .professions img{
-        width: 120%;
-        margin-left: 50%;
-        transform: translate(-50%);
-    }
+.prof-item {
+    flex-basis: 4rem;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     
 }
-#first_img_line{
-    padding-left: 2vw;
-}
-#sec_img_line{
-    padding-left: 7.5vw;
-}
 
-.section1{
-    position: relative;
-    margin-top: 3.5%;
-    margin-left: 20%;
-    margin-right: 20%;
-    text-align: center;
-
-}
-.section1 h2{
-    font-size: 1.8em;
-}
-.section1 p{
-    font-size: 1.5em;
-}
 
 .rectangle2{
     position: relative;
-    height: fit-content;
-    width: fit-content;
     background: #502008;
     border: 2px solid #000000;
     box-sizing: border-box;
     box-shadow: 0px 4px 4px #B02E2E;
-    padding-left: 4px;
-    padding-right: 4px;
-}
-.rectangle2{
-    position: relative;
-    /* bottom: 0.8vw; */
-    font-size: 1.5em;
+    font-size: 1.5rem;
     text-align: center;
     color: white;
     padding: 8px;
     font-family: 'Alef', sans-serif;
-}
-#no_decoration{
-    text-decoration: none;
+    margin-top: 1rem;
 }
 
-.section2{
-    position: relative;
-    margin-left: 20%;
-    margin-right: 20%;
 
-}
-#section2_head{
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 70ch;
+    margin-top: 1rem;
     text-align: center;
-    font-size: 1.5em;
-
-}
-#slider{
-    overflow: hidden;
-}
-#slider figure{
-    position: relative;
-    width: 500%;
-    margin: 0;
-    left: 0;
-    animation: 20s slider infinite;
-}
-#slider figure img{
-    float: left;
-    width: 20%;
-}
-@keyframes slider{
-    0% {
-        left: 0;
-    }
-    20% {
-        left: 0;
-    }
-    25%{
-        left: -100%;
-    }
-    45%{
-        left: -100%;
-    }
-    50%{
-        left: -200%;
-    }
-    70%{
-        left: -200%;
-    }
-
-}
-
-.section2 p{
-    text-align: center;
-    font-size: 1.5em;
 }
 
 footer {
     background-color: black;
     color: white;
     width: 100%;
+    margin-top: 2rem;
     
 }
 main {
     min-height: calc(100vh - 280px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .flex_container{
     display: flex;
@@ -398,78 +284,7 @@ footer a{
     padding-bottom: 0.6vw;
 }
 
-.jobs_section{
-    display: flex;
-    justify-content: space-evenly;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-@media screen and (max-width: 992px){
-    .jobs_section{
-        display: initial;
-        justify-content: space-evenly;
-        margin-left: 20%;
-        margin-right: 20%;
-    }
-}
 
-.column{
-    flex: 1;
-}
-.job{
-    position: relative;
-    /* padding-top: 1.6vh; */
-    text-align: center;
-    margin: 5% 5% 0% 5%;
-    background-color: rgb(214, 192, 192);
-    min-height: 24vw;
-    /* padding-bottom: 1.4vh; */
-    border: 0.1vw solid black;
-
-  
-}
-
-@media screen and (max-width: 760px) {
-    .section1 {
-        font-size: 1em;
-    }
-    .section2 {
-        font-size: 1em;
-    }
-}
-.job p{
-    margin-left: 5%;
-    margin-right: 5%;
-}
-.send_cv{
-    text-decoration: none;
-}
-
-.job button{
-    position: absolute;
-    border: 0.2vw solid black;
-    font-size: 1.2em;
-    background-color: burlywood;
-    left: 30%;
-    bottom: 0.6vw;
-    transition: 1s;
-    margin-top: 10px;
-}
-.job button:hover{
-    background-color: rgb(255, 169, 64);
-    cursor: pointer;
-}
-#myForm{
-    text-align: center;
-    margin-bottom: 5em;
-}
-
-
-.job-master {
-    margin-left: 50%;
-    transform: translate(-50%);
-    text-align: center;
-}
 
 .contact-details {
     margin-left: 50%;
@@ -485,3 +300,6 @@ footer a{
 .cursive {
     font-family: 'Kalam', cursive;
 }
+
+
+
