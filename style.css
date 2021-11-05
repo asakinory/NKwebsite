@@ -21,7 +21,7 @@ body{
     margin-left: 1rem;
     margin-right: 1rem;
     overflow-x: hidden;
-    font-size: 18px; /* Hide scrollbar */
+    /* Hide scrollbar */
     /* TODO: find why horizontal scrollbar appears on the right side */
 }
 
