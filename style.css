@@ -106,8 +106,12 @@ nav a::after {
     justify-content: space-between;
     align-items: center;
     width: var(--button-container-width);
-    top: 85vh;
+    top: 75vh;
     right: 1rem;
+}
+.accessability:hover{
+    cursor: pointer;
+    background-color: #afa2a2;
 }
 
 
@@ -145,9 +149,10 @@ nav a::after {
 #accessabilityStatement{
     text-decoration: underline;
     text-shadow: 0.5px 0.5px #7c7373;
-    font-size: 1rem;
     pointer-events: none;
     display: none;
+    font-size: 1.5rem;
+
 
 }
 @media screen and (max-width: 800px){
