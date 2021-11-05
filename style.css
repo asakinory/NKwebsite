@@ -18,6 +18,8 @@ body{
     display: block;
     background-color: #F2EDDF;
     direction: rtl;
+    margin-left: 1rem;
+    margin-right: 1rem;
     overflow-x: hidden; /* Hide scrollbar */
     /* TODO: find why horizontal scrollbar appears on the right side */
 }
@@ -46,7 +48,8 @@ nav ul li{
         justify-content: flex-end;
     }
     nav ul li{
-        flex-basis: 6rem;
+        flex-basis: 4rem;
+        font-size: 1rem;
     }
 }
   
@@ -57,6 +60,16 @@ nav ul li{
     top: 0.5rem;
     right: 0.5rem;
 }
+
+@media screen and (max-width: 768px) {
+    .logo{
+        width: 6rem;
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+}
+    
+
 
 
 nav a{
@@ -167,9 +180,9 @@ nav a::after {
 .white-text-with-stroke {
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  }
+}
 
-  @media screen and (max-width: 800px){
+@media screen and (max-width: 800px){
     .name-headline{
         font-size: 2.5rem;
     }
@@ -180,6 +193,12 @@ nav a::after {
     font-family: 'Gveret Levin AlefAlefAlef';
     font-size: 2rem;
 
+}
+
+@media screen and (max-width: 800px){
+    .moto-headline {
+        font-size: 1.5rem;
+    }
 }
 
 .call-to-action{
@@ -199,7 +218,7 @@ nav a::after {
 
 @media screen and (max-width: 800px) {
     .call-to-action>H1{
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 }
 
@@ -215,6 +234,16 @@ nav a::after {
     width: 90%;
     border-radius: 10%;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 800px) {
+    .prof-flex-images-grid img {
+        width: 60%;
+        border-radius: 30%;
+
+    }
+}
+    
 }
 
 .prof-item {
