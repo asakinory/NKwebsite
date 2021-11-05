@@ -46,13 +46,13 @@ accessabilityBtn.addEventListener('click', () =>{
 
 fontBtn.addEventListener('click', () => {
     if(fontFlag) {
-        bodyElement.style.fontSize = '16px';
+        bodyElement.style.fontSize = '1.25rem';
         fontFlag = false;
         fontBtn.style.border = "0px solid black"
 
     }
     else{
-        bodyElement.style.fontSize = '32px';
+        bodyElement.style.fontSize = '1.75rem';
         fontFlag = true;
         fontBtn.style.border = "2px solid black"
     }

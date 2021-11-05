@@ -21,6 +21,7 @@ body{
     margin-left: 1rem;
     margin-right: 1rem;
     overflow-x: hidden;
+    font-size: 1.25rem;
     /* Hide scrollbar */
     /* TODO: find why horizontal scrollbar appears on the right side */
 }
@@ -238,6 +239,12 @@ nav a::after {
 
     }
 }
+
+.prof-flex-images-grid img:hover {
+    cursor: pointer;
+    background-color: rgba(214, 192, 192, 0.699);
+    transform: scale(1.1);
+}
 .prof-grid-item {
     display: flex;
     justify-content: center;
@@ -245,6 +252,7 @@ nav a::after {
     flex-direction: column;
     margin-bottom: 0.5rem;
 }
+
 .rectangle2{
     position: relative;
     background: #502008;
@@ -267,9 +275,9 @@ section {
     text-align: center;
 }
 
-section p{
+/* section p{
     font-size: 1.25rem;
-}
+} */
 
 
 main {
