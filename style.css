@@ -116,7 +116,7 @@ nav a::after {
 }
 
 
-.accessability button {
+.accessability div {
     padding: 0;
     width: var(--button-container-width);
     height: var(--button-container-width);
@@ -124,13 +124,13 @@ nav a::after {
     border: 1px solid transparent;
 }
 
-.accessability button img {
+.accessability div img {
     width: 2.5rem;
     height: 2.5rem;
 }
 
 
-.accessability button:hover {
+.accessability div:hover {
     cursor: pointer;
 }
 
