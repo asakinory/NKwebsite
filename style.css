@@ -48,10 +48,10 @@ nav ul li{
 @media screen and (max-width: 768px) {
     nav ul{
         justify-content: flex-end;
-        font-size: 1em;
+        font-size: 0.9em;
     }
     nav ul li{
-        flex-basis: 4.3rem;
+        flex-basis: 4rem;
         
     }
 }
