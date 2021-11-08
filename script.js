@@ -63,11 +63,13 @@ contrastBtn.addEventListener('click', () => {
         bodyElement.style.filter = 'contrast(100%)';
         contrastFlag = false;
         contrastBtn.style.border = "0px solid black"
+        bodyElement.style.backgroundColor = '#F2EDDF';
     }
     else{
         bodyElement.style.filter = 'contrast(200%)';
         contrastFlag = true;
-        contrastBtn.style.border = "2px solid black"
+        contrastBtn.style.border = "2px solid black";
+        bodyElement.style.backgroundColor = 'white';
 
     }
 })
