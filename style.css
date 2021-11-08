@@ -31,7 +31,7 @@ a {
 }
 
 nav ul{
-    font-size: 1.5rem;
+    font-size: 1.5em;
     list-style: none;
     display: flex;
     justify-content: center;
@@ -48,10 +48,11 @@ nav ul li{
 @media screen and (max-width: 768px) {
     nav ul{
         justify-content: flex-end;
+        font-size: 1em;
     }
     nav ul li{
-        flex-basis: 4rem;
-        font-size: 1rem;
+        flex-basis: 4.3rem;
+        
     }
 }
   
