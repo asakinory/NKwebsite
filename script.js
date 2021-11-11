@@ -9,27 +9,23 @@ let contrastBtn = document.getElementById('contrastBtn');
 let accessabilityStatement = document.getElementById('accessabilityStatement');
 
 
-if(fontFlag == true){
-    bodyElement.style.fontSize = '32px';
-    fontBtn.style.border = "2px solid black"
-}
-
-if(contrastFlag == true){
-    bodyElement.style.filter = 'contrast(200%)';
-    contrastBtn.style.border = "2px solid black"
-
-}
-
-accessabilityBtn.addEventListener('click', () =>{
+// Accessability Function
+function accessability() {
     if(accessabilityFlag){
         accessabilityFlag = false;
 
         fontBtn.style.setProperty('pointer-events', 'none')
         fontBtn.style.setProperty('display', 'none')
+        fontBtn.style.setProperty('visibility', 'hidden')
+
         contrastBtn.style.setProperty('pointer-events', 'none')
         contrastBtn.style.setProperty('display', 'none')
+        contrastBtn.style.setProperty('visibility', 'hidden')
+
         accessabilityStatement.style.setProperty('pointer-events', 'none')
         accessabilityStatement.style.setProperty('display', 'none')
+        accessabilityStatement.style.setProperty('visibility', 'hidden')
+
     }
     else{
         accessabilityFlag = true;
@@ -37,14 +33,20 @@ accessabilityBtn.addEventListener('click', () =>{
 
         fontBtn.style.setProperty('pointer-events', 'auto')
         fontBtn.style.setProperty('display', 'block')
+        fontBtn.style.setProperty('visibility', 'visible')
+
         contrastBtn.style.setProperty('pointer-events', 'auto')
         contrastBtn.style.setProperty('display', 'block')
+        contrastBtn.style.setProperty('visibility', 'visible')
+
         accessabilityStatement.style.setProperty('pointer-events', 'auto')
         accessabilityStatement.style.setProperty('display', 'block')
+        accessabilityStatement.style.setProperty('visibility', 'visible')
+        
     }
-})
+}
 
-fontBtn.addEventListener('click', () => {
+function fontSize() {
     if(fontFlag) {
         bodyElement.style.fontSize = '1.25rem';
         fontFlag = false;
@@ -56,9 +58,9 @@ fontBtn.addEventListener('click', () => {
         fontFlag = true;
         fontBtn.style.border = "2px solid black"
     }
-})
+}
 
-contrastBtn.addEventListener('click', () => {
+function contrast() {
     if(contrastFlag) {
         bodyElement.style.filter = 'contrast(100%)';
         contrastFlag = false;
@@ -70,7 +72,34 @@ contrastBtn.addEventListener('click', () => {
         contrastFlag = true;
         contrastBtn.style.border = "2px solid black";
         bodyElement.style.backgroundColor = 'white';
+    }
+}
 
+
+accessabilityBtn.addEventListener('click', () =>{
+    accessability();
+})
+window.addEventListener('keydown', (e) =>{
+
+    if(e.key === 'Enter' && document.activeElement == accessabilityBtn){
+        accessability();
     }
 })
 
+fontBtn.addEventListener('click', () => {
+    fontSize();
+})
+fontBtn.addEventListener('keydown', (e) => {
+    if(e.key === 'Enter'){
+        fontSize();
+    }
+})
+
+contrastBtn.addEventListener('click', () => {
+    contrast();
+})
+contrastBtn.addEventListener('keydown', (e) => {
+    if(e.key === 'Enter'){
+        contrast();
+    }
+})

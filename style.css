@@ -30,6 +30,17 @@ a {
     text-decoration: none;
 }
 
+/* Give an image in a link focus */
+a:focus img {
+    outline: black solid 2px;
+}
+
+#logo-link:focus {
+    outline-style: solid;
+    outline-width: 22rem;
+    outline-color: #8f0c0c;
+}
+
 nav ul{
     font-size: 1.25em;
     list-style: none;
@@ -62,6 +73,10 @@ nav ul li{
     width: 10rem;
     top: 0.5rem;
     right: 0.5rem;
+}
+
+.logo:hover{
+    cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
@@ -123,6 +138,10 @@ nav a::after {
     height: var(--button-container-width);
     background-color: transparent;
     border: 1px solid transparent;
+}
+
+.accessability div:not(:first-child){
+    visibility: hidden;
 }
 
 .accessability div img {
@@ -331,6 +350,7 @@ footer a{
     color: black;
     padding-left: 2rem;
     padding-right: 2rem;
+    margin-top: 3rem;
 }
 
 .cursive {
