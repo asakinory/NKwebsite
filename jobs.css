@@ -56,3 +56,7 @@ main {
 .send_cv{
     text-decoration: none;
 }
+
+button:focus{
+    outline-offset: 0.25rem;
+}
