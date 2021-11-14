@@ -15,7 +15,6 @@
 
 body{
     font-family: 'Alef';
-    display: block;
     background-color: #F2EDDF;
     direction: rtl;
     margin-left: 1rem;
@@ -295,17 +294,14 @@ section {
     text-align: center;
 }
 
-/* section p{
-    font-size: 1.25rem;
-} */
-
-
 main {
     min-height: calc(100vh - 14rem);
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+
 }
 
 footer {
@@ -335,8 +331,6 @@ footer a{
     padding-bottom: 1rem;
     
 }
-
-
 
 
 .contact-details {
