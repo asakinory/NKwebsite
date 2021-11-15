@@ -256,7 +256,12 @@ nav a::after {
     .prof-flex-images-grid img {
         width: 60%;
         border-radius: 30%;
+    }
+}
 
+@media screen and (max-width: 700px) {
+    .prof-flex-images-grid {
+        max-width: 300px;
     }
 }
 
