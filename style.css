@@ -245,6 +245,7 @@ nav a::after {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    max-width: 90%;
 }
 .prof-flex-images-grid img {
     width: 90%;
