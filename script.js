@@ -7,6 +7,12 @@ let bodyElement = document.querySelector('body');
 let fontBtn = document.getElementById('fontSizeBtn');
 let contrastBtn = document.getElementById('contrastBtn');
 let accessabilityStatement = document.getElementById('accessabilityStatement');
+let job_a_links = document.querySelectorAll('.job a')
+
+
+job_a_links.forEach(function(link){
+    link.tabIndex = -1;
+})
 
 
 // Accessability Function
