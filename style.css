@@ -3,10 +3,6 @@
     padding: 0;
 }
 
-@font-face {
-    font-family: "Gveret Levin AlefAlefAlef";
-    src: url("GveretLevinAlefAlefAlef-Regular.otf") format("opentype");
-}
 
 body{
     font-family: 'Alef';
@@ -27,12 +23,6 @@ a {
 /* Give an image in a link focus */
 a:focus img {
     outline: black solid 2px;
-}
-
-#logo-link:focus {
-    outline-style: solid;
-    outline-width: 22rem;
-    outline-color: #8f0c0c;
 }
 
 nav ul{
@@ -229,11 +219,8 @@ nav a::after {
     background: #7e1919;
     font-size: 2rem;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-right: 8px;
-    padding-left: 8px;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
     font-family: 'Alef', sans-serif;
     color: white;
 }
@@ -247,7 +234,7 @@ nav a::after {
 }
 .prof-flex-images-grid img {
     width: 90%;
-    border-radius: 10%;
+    border-radius: 0.5rem;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
 }
 @media screen and (max-width: 800px) {
@@ -265,7 +252,7 @@ nav a::after {
 
 .prof-flex-images-grid img:hover {
     cursor: pointer;
-    background-color: rgba(214, 192, 192, 0.699);
+    background-color: rgb(214, 192, 192);
     transform: scale(1.1);
 }
 .prof-grid-item {
@@ -276,18 +263,18 @@ nav a::after {
     margin-bottom: 0.5rem;
 }
 
-.rectangle2{
+.paragraph-call-to-action{
     position: relative;
-    background: #502008;
+    background: #7e1919;
     border: 2px solid #000000;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px #B02E2E;
+    box-shadow: 0px 4px 4px #0000008c;
     font-size: 1.5rem;
     text-align: center;
     color: white;
     padding: 8px;
-    font-family: 'Alef', sans-serif;
     margin-top: 1rem;
+    width: 8.5rem;
+    border-radius: 0.5rem;
 }
 section {
     display: flex;
@@ -344,7 +331,7 @@ footer a{
     flex-direction: column;
     text-align: center;
     outline: 2px solid black;
-    background-color: #ccc8c8;
+    background-color: rgb(214, 192, 192);
     color: black;
     padding-left: 2rem;
     padding-right: 2rem;

@@ -30,10 +30,13 @@ main {
 
 .job button{
     border: 0.2vw solid black;
-    font-size: 1rem;
-    background-color: burlywood;
+    font-size: 1.25rem;
+    background-color: #7e1919;
     padding: 0.5rem;
     align-self: flex-end;
+    color: white;
+    font-family: 'Alef';
+    font-weight: bold;
 }
 .job button:hover{
     background-color: rgb(255, 169, 64);
