@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: "Gveret Levin AlefAlefAlef";
+    src: url("GveretLevinAlefAlefAlef-Regular.otf") format("opentype");
+}
 
 body{
     font-family: 'Alef';
@@ -164,12 +168,12 @@ nav a::after {
 
 
 }
-@media screen and (max-width: 800px){
+/* @media screen and (max-width: 800px){
 
     .accessibility {
         flex-direction: column;
     }
-}
+} */
 
 .container {
     text-align: center;
