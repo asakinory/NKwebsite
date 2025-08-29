@@ -179,7 +179,7 @@ nav a::after {
     width: 100%;
     height:70vh;
     display: flex;
-    background-image: url(newhero.jpg);
+    background-image: url(images/newhero.jpg);
     background-size: cover;
     flex-direction: column;
     justify-content: center;
@@ -190,7 +190,7 @@ nav a::after {
 
 @media screen and (max-width: 550px) {
     .container {
-        background-image: url(zoom.jpg);
+        background-image: url(images/zoom.jpg);
     }
 }
     
