@@ -1,155 +1,432 @@
 <!DOCTYPE html>
-<html lang="he">
+<html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alef&family=Kalam&display=swap">  
-    <title>נורית כנורי שרותי השמה בביטוח</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>נורית כנורי - שרותי השמה מקצועיים בביטוח</title>
+    <meta name="description" content="נורית כנורי מובילה בתחום השמת עובדים מקצועיים בביטוח. יותר מ-20 שנות ניסיון בגיוס והשמה בתחומי ביטוח חיים, אלמנטרי, כספים ועוד.">
+    <meta name="keywords" content="נורית כנורי, השמה בביטוח, גיוס עובדים, ביטוח חיים, חיתום אלמנטרי, תביעות, עורכי דין, כספים, שיווק, מערכות מידע, קריירה בביטוח">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
     <link href="style.css" rel="stylesheet" type="text/css">
-    <meta name="keywords" content="נורית כנורי,ברי כנורי,נורית כינורי,ברי כינורי,שירותי ,kinory nurit, kinory, השמה בביטוח,עובדים מקצועיים,כח אדם,כוח אדם,ביטוח חיים, חיתום אלמנטרי,תביעות,עורכי דין,כספים,שיווק,אנשי מחשב,עובדים כלליים,גיוס והשמה של אקדמאים,גיוס והשמת בכירים,מאגר משרות,ייעוץ,משרה,חבויות,דירות,רכבים תעשיה,נזיקין,יועצים פיננסיים,כלכלנים,רואי חשבון,מבקרי פנים,אנשי גבייה,הנהלת חשבונות,מנהלי תיקים,אנשי שיווק ומכירות,בעלי ידע בביטוח,מזכירות,קלדניות,מרכזניות,פקידי תיקיה וארכיב,בוגרי אוניברסיטה, בוגרי מכללה, תלמידי המסלול האקדמי בביטוח,חברות ביטוח,בנקים,קרנות פנסיה,נשים,גברים,אנשי תפעול,מנהלי תיקים פנסיוניים,בעלי רישיון,חתמים רפואיים,אקטוארים, בודקי תוכנה, QA,השמה ביטוח, ביטוח השמה,מגדירי דרישות,שמאים,עובדים,שירות,קריירה,מעסיק,השמה ביטוח, ביטוח השמה, עבודה,ג'וב">
-    <meta name="description" content="Nurit Kinory, Insurance Human Resources Agency Webpage">
 </head>
 <body>
-    <header>
-        <a href="index.html"><img src="images/nk logo.png" class="logo" alt="נורית כנורי שרותי השמה בתחום הביטוח - נווט לדף הבית"></a>
-        <nav>
-            <ul>
-                <li><a href="contact.html"><b>צור קשר</b></a></li>
-                <li><a href="jobs.html"><b>משרות</b></a></li>
-                <li><a href="about.html"><b>אודותינו</b></a></li>
+    <!-- Loading Animation -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+        <p>טוען...</p>
+    </div>
 
-            </ul>  
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="images/nk logo.png" alt="נורית כנורי - שרותי השמה בביטוח" class="logo-img">
+                    </a>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <a href="index.html" class="nav-link active">בית</a>
+                    <a href="about.html" class="nav-link">אודותינו</a>
+                    <a href="jobs.html" class="nav-link">משרות</a>
+                    <a href="contact.html" class="nav-link">צור קשר</a>
+                </div>
+                
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <div class="accessibility">
-        <div >
-            <div id="accessibilityBtn" tabindex="0"><img src="images/accessibility-images/accessibility.png" class="accessibility-img" alt="accessibility icon"></div>
+    <!-- Accessibility Toolbar -->
+    <div class="accessibility-toolbar" id="accessibility-toolbar">
+        <button class="accessibility-toggle" id="accessibility-toggle" aria-label="פתח כלי נגישות">
+            <i class="fas fa-universal-access"></i>
+        </button>
+        <div class="accessibility-options" id="accessibility-options">
+            <button class="accessibility-btn" id="font-size-btn" aria-label="הגדל גופן">
+                <i class="fas fa-text-height"></i>
+                <span>הגדל גופן</span>
+            </button>
+            <button class="accessibility-btn" id="contrast-btn" aria-label="שנה ניגודיות">
+                <i class="fas fa-adjust"></i>
+                <span>ניגודיות גבוהה</span>
+            </button>
+            <a href="accessibility.html" class="accessibility-btn" aria-label="הצהרת נגישות">
+                <i class="fas fa-info-circle"></i>
+                <span>הצהרת נגישות</span>
+            </a>
+            <button class="accessibility-btn accessibility-hide-btn" id="accessibility-hide-btn" aria-label="הסתר כלי נגישות">
+                <i class="fas fa-times"></i>
+                <span>הסתר</span>
+            </button>
         </div>
-        <div>
-            <div id="fontSizeBtn" tabindex="0"><img src="images/accessibility-images/increase-font-size-button.png" alt="increase font size"></div>
-        </div>
-        <div tabindex="0">
-            <div id="contrastBtn" tabindex="0"><img src="images/accessibility-images/contrast-img.png" alt="increase page color contrast"></div>
-        </div>
-        <div>
-            <a href="accessibility.html"  id="accessibilityStatement"><div>הצהרת נגישות</div></a>
-        </div>
-
     </div>
-    
-    <main>
-        <div class="container">
-            <H1 class="name-headline .white-text-with-stroke">נורית כנורי</H1>
-            <p class="moto-headline">שרותי גיוס והשמה מקצועיים בתחום הביטוח</p>
-            <a href="contact.html"><div class= "call-to-action"><b>צור איתנו קשר</b></div></a>
-            
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <img src="images/newhero.jpg" alt="רקע" class="hero-image">
         </div>
-        <section class="professions">
-            <h2>תחומי ההתמחות שלנו</h2>
-            <!-- Makes a grid with all the images in the prof-images folder. -->
-            <div class="prof-flex-images-grid">
-                <div class="prof-grid-item">
-                    <a href="jobs.html"><img src="images/prof-images/academaim.png" alt="אקדמאים"></a>
-                    <p>אקדמאים</p>
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title">
+                    <span class="title-main">נורית כנורי</span>
+                    <span class="title-subtitle">שרותי גיוס והשמה מקצועיים בתחום הביטוח</span>
+                </h1>
+                <p class="hero-description">
+                    יותר מ-20 שנות ניסיון במציאת הזדמנויות קריירה מצוינות בתחום הביטוח
+                </p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn btn-primary">
+                        <i class="fas fa-phone"></i>
+                        צור קשר
+                    </a>
+                    <a href="jobs.html" class="btn btn-secondary">
+                        <i class="fas fa-briefcase"></i>
+                        משרות פתוחות
+                    </a>
                 </div>
-                <div class="prof-grid-item">
-                    <a href="jobs.html"><img src="images/prof-images/bchirim.png" alt="בכירים"></a>
-                    <p>בכירים</p>
-                </div>
-                <div class="prof-grid-item">
-                    <a href="jobs.html"><img src="images/prof-images/csafim.png" alt="כספים"></a>
-                    <p>כספים</p>
-                </div>
-                <div class="prof-grid-item">
-                    <a href="jobs.html"><img src="images/prof-images/din.png" alt="עורכי דין"></a>
-                    <p>עורכי דין</p>
-                </div>
-                <div class="prof-grid-item">
-                    <a href="jobs.html"><img src="images/prof-images/elementary.png" alt="אלמנטרי"></a>
-                    <p>אלמנטרי</p>
-                </div>
-                <div class="prof-grid-item">
-                    <a href="jobs.html"><img src="images/prof-images/haim.png" alt="חיים"></a>
-                    <p>חיים</p>
-                </div>
-                <div class="prof-grid-item">
-                    <a href="jobs.html"><img src="images/prof-images/mahshevim.png" alt="מערכות מידע"></a>
-                    <p>מערכות מידע</p>
-                </div>
-                <div class="prof-grid-item">
-                    <a href="jobs.html"><img src="images/prof-images/shirut.png" alt="שירות לקוחות"></a>
-                    <p>שרות לקוחות</p>
-                </div>
-                <div class="prof-grid-item">
-                    <a href="jobs.html"><img src="images/prof-images/shivuk.png" alt="שיווק"></a>
-                    <p>שיווק</p>
-                </div>
-                <div class="prof-grid-item">
-                    <a href="jobs.html"><img src="images/prof-images/tviot.png" alt="תביעות"></a>
-                    <p>תביעות</p>
+                
+                <!-- Stats -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">שנות ניסיון</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">השמות מוצלחות</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10</div>
+                        <div class="stat-label">תחומי התמחות</div>
+                    </div>
                 </div>
             </div>
-            <p>
-                 אנו מתמחים בהשמה של עובדים מקצועיים בתחום הביטוח מכל הסוגים. <br>
-                 חיתום אלמטרי, ביטוח חיים, תביעות, עורכי דין, כספים, שיווק מכירות, אקדמאים, שירות לקוחות, מערכות מידע, בכירים ועוד.
-            </p>
-            <a href="jobs.html" class="send_cv"><div class= "paragraph-call-to-action centered"><b>משרות</b></div></div></a>            
-        </section>
-        <section class="section1">
-            <h2>ניסיון, ידע, הצלחה</h2>
-            <p>
-                עם יותר מ- 20 שנות ניסיון והיכרות מעמיקה עם עולם הביטוח, אנו מציעים שירות מעולה בבניית קריירה והשמת עובדים מקצועיים.<br>
-                אנו מציעים לפונים אלינו מאגר משרות גדול ומגוון, ייעוץ ותמיכה בקידום הקריירה, טיפול אישי ודיסקרטיות מלאה.<br>
-                אנחנו מאמינים בתהליך השמה יסודי הכולל הבנה מלאה של צרכי העובד וצרכי המעסיק כדי ליצור שיתופי פעולה מצליחים.
-            </p>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
 
-            <a href="about.html" class="send_cv"><div class= "paragraph-call-to-action centered"><b>עוד עלינו</b></div></div></a>
-                 
-        </section>
-
-        <section class="section2">
-
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">תחומי ההתמחות שלנו</h2>
+                <p class="section-subtitle">
+                    אנו מתמחים בהשמה של עובדים מקצועיים בכל תחומי הביטוח
+                </p>
+            </div>
             
-            <p>
-                 אם הינך מעוניין\ת להיעזר בשירותינו למצוא עובד\ת איכותי\ת ממאגר העובדים הגדול שברשותינו אנו מזמינים אותך ליצור איתנו קשר.
-            </p>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <img src="images/prof-images/academaim.png" alt="אקדמאים">
+                    </div>
+                    <h3 class="service-title">אקדמאים</h3>
+                    <p class="service-description">בוגרי אוניברסיטאות ומכללות עם התמחות בתחומי הביטוח</p>
+                    <a href="jobs.html" class="service-link">
+                        <span>למשרות</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
 
-            <a href="contact.html"><div class= "paragraph-call-to-action"><b>ליצירת קשר</b></div></div></a>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <img src="images/prof-images/bchirim.png" alt="בכירים">
+                    </div>
+                    <h3 class="service-title">בכירים</h3>
+                    <p class="service-description">מנהלים ובכירים בתחומי הביטוח והפיננסים</p>
+                    <a href="jobs.html" class="service-link">
+                        <span>למשרות</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
 
-        </section>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <img src="images/prof-images/csafim.png" alt="כספים">
+                    </div>
+                    <h3 class="service-title">כספים</h3>
+                    <p class="service-description">מומחי כספים, רואי חשבון ואנליסטים פיננסיים</p>
+                    <a href="jobs.html" class="service-link">
+                        <span>למשרות</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
 
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <img src="images/prof-images/din.png" alt="עורכי דין">
+                    </div>
+                    <h3 class="service-title">עורכי דין</h3>
+                    <p class="service-description">עורכי דין מומחים בתחומי ביטוח ונזיקין</p>
+                    <a href="jobs.html" class="service-link">
+                        <span>למשרות</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
 
-    </main>
-    <footer>
-        <div class="flex_container">
-            <section>
-                <div class="footer_line">
-                    טלפון: 077-6046030
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <img src="images/prof-images/haim.png" alt="ביטוח חיים">
+                    </div>
+                    <h3 class="service-title">ביטוח חיים</h3>
+                    <p class="service-description">מומחים בתחום ביטוח החיים והפנסיה</p>
+                    <a href="jobs.html" class="service-link">
+                        <span>למשרות</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
                 </div>
-                <div class="footer_line">
-                    אימייל: <span>nurit@kinory.co.il</span>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-icon">
+                        <img src="images/prof-images/elementary.png" alt="אלמנטרי">
+                    </div>
+                    <h3 class="service-title">ביטוח אלמנטרי</h3>
+                    <p class="service-description">חתמים ומומחי ביטוח רכב, דירות ועסקים</p>
+                    <a href="jobs.html" class="service-link">
+                        <span>למשרות</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
                 </div>
-                <div class="footer_line">
-                    לשליחת קו"ח: <span>cb2@kinory.co.il</span>
-                </div>           
-            </section>
-            <section>
-                <div class="footer_line">
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="700">
+                    <div class="service-icon">
+                        <img src="images/prof-images/mahshevim.png" alt="מערכות מידע">
+                    </div>
+                    <h3 class="service-title">מערכות מידע</h3>
+                    <p class="service-description">מומחי טכנולוגיה ומערכות מידע בביטוח</p>
+                    <a href="jobs.html" class="service-link">
+                        <span>למשרות</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
                 </div>
-                <div class="footer_line">
-                    <a href="index.html">לדף הבית</a> 
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="800">
+                    <div class="service-icon">
+                        <img src="images/prof-images/shivuk.png" alt="שיווק">
+                    </div>
+                    <h3 class="service-title">שיווק ומכירות</h3>
+                    <p class="service-description">אנשי שיווק ומכירות מקצועיים בתחום הביטוח</p>
+                    <a href="jobs.html" class="service-link">
+                        <span>למשרות</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
                 </div>
-                <div class="footer_line">
-                    <a href="accessibility.html">הצהרת נגישות</a> 
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="900">
+                    <div class="service-icon">
+                        <img src="images/prof-images/tviot.png" alt="תביעות">
+                    </div>
+                    <h3 class="service-title">תביעות</h3>
+                    <p class="service-description">מסלקי תביעות ומומחי טיפול בתביעות ביטוח</p>
+                    <a href="jobs.html" class="service-link">
+                        <span>למשרות</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
                 </div>
-         
-            </section>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="1000">
+                    <div class="service-icon">
+                        <img src="images/prof-images/shirut.png" alt="שירות לקוחות">
+                    </div>
+                    <h3 class="service-title">שירות לקוחות</h3>
+                    <p class="service-description">נציגי שירות ותמיכה לקוחות מקצועיים</p>
+                    <a href="jobs.html" class="service-link">
+                        <span>למשרות</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-preview">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <div class="section-header">
+                        <h2 class="section-title">ניסיון, ידע, הצלחה</h2>
+                        <p class="section-subtitle">
+                            עם יותר מ-20 שנות ניסיון והיכרות מעמיקה עם עולם הביטוח
+                        </p>
+                    </div>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>מאגר משרות גדול ומגוון</h3>
+                                <p>גישה למאגר הזדמנויות קריירה נרחב בכל תחומי הביטוח</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>ייעוץ ותמיכה אישית</h3>
+                                <p>ליווי מקצועי לאורך כל תהליך החיפוש והשמה</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>דיסקרטיות מלאה</h3>
+                                <p>טיפול רגיש ובטוח במידע האישי והמקצועי</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="about.html" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i>
+                        קרא עוד עלינו
+                    </a>
+                </div>
+                
+                <div class="about-image" data-aos="fade-left">
+                    <div class="image-container">
+                        <img src="images/newhero.jpg" alt="נורית כנורי - מומחית השמה">
+                        <div class="image-overlay">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2 class="cta-title">מוכנים להתחיל את המסע להזדמנות הקריירה הבאה שלכם?</h2>
+                <p class="cta-description">
+                    אם אתם מעסיקים המחפשים עובדים איכותיים או מחפשי עבודה שמחפשים את ההזדמנות המושלמת - אנחנו כאן בשבילכם
+                </p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i>
+                        ליצירת קשר
+                    </a>
+                    <a href="jobs.html" class="btn btn-outline">
+                        <i class="fas fa-search"></i>
+                        חפש משרות
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/nk logo.png" alt="נורית כנורי">
+                        <h3>נורית כנורי</h3>
+                        <p>שרותי השמה מקצועיים בביטוח</p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#" aria-label="לינקדין">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" aria-label="פייסבוק">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="mailto:nurit@kinory.co.il" aria-label="אימייל">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>קישורים מהירים</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">דף הבית</a></li>
+                        <li><a href="about.html">אודותינו</a></li>
+                        <li><a href="jobs.html">משרות</a></li>
+                        <li><a href="contact.html">צור קשר</a></li>
+                        <li><a href="accessibility.html">הצהרת נגישות</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>פרטי קשר</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>077-6046030</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>nurit@kinory.co.il</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>cb2@kinory.co.il</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>תחומי התמחות</h4>
+                    <ul class="footer-links">
+                        <li><a href="jobs.html">ביטוח חיים</a></li>
+                        <li><a href="jobs.html">ביטוח אלמנטרי</a></li>
+                        <li><a href="jobs.html">כספים ופיננסים</a></li>
+                        <li><a href="jobs.html">עורכי דין</a></li>
+                        <li><a href="jobs.html">מערכות מידע</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 נורית כנורי - שרותי השמה בביטוח. כל הזכויות שמורות.</p>
+                    <div class="footer-bottom-links">
+                        <a href="accessibility.html">נגישות</a>
+                        <a href="#">תנאי שימוש</a>
+                        <a href="#">פרטיות</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
-    <script src="script.js"></script>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="חזור למעלה">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
