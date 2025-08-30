@@ -309,7 +309,7 @@ body {
     position: fixed;
     bottom: var(--space-6);
     right: var(--space-6);
-    z-index: 999;
+    z-index: 9999 !important;
     transition: all var(--transition-normal);
     opacity: 1;
     visibility: visible;
@@ -1175,9 +1175,206 @@ section {
     transform: translateY(-2px);
 }
 
-/* Accessibility Features */
+/* Accessibility Features - High contrast mode with pure black/white colors */
 .high-contrast {
-    filter: contrast(150%) brightness(110%);
+    background: #ffffff !important;
+    color: #000000 !important;
+}
+
+/* Dark backgrounds get white text */
+.high-contrast .header,
+.high-contrast .navbar,
+.high-contrast .hero,
+.high-contrast .page-hero,
+.high-contrast .cta-section,
+.high-contrast .footer {
+    background: #000000 !important;
+    color: #ffffff !important;
+}
+
+/* Light backgrounds get black text */
+.high-contrast main,
+.high-contrast .services,
+.high-contrast .about-preview,
+.high-contrast .company-story,
+.high-contrast .contact-section {
+    background: #ffffff !important;
+    color: #000000 !important;
+}
+
+/* All headings */
+.high-contrast h1,
+.high-contrast h2,
+.high-contrast h3,
+.high-contrast h4,
+.high-contrast h5,
+.high-contrast h6 {
+    color: inherit !important;
+}
+
+/* All paragraphs and text elements */
+.high-contrast p,
+.high-contrast span,
+.high-contrast div,
+.high-contrast li {
+    color: inherit !important;
+}
+
+/* Links - high contrast colors */
+.high-contrast a {
+    color: #0000ff !important;
+    text-decoration: underline !important;
+}
+
+.high-contrast a:hover {
+    color: #ff0000 !important;
+}
+
+/* Buttons in high contrast */
+.high-contrast .btn {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+}
+
+.high-contrast .btn:hover {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 2px solid #000000 !important;
+}
+
+/* Cards and containers */
+.high-contrast .service-card,
+.high-contrast .job-card,
+.high-contrast .contact-form-container {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 2px solid #000000 !important;
+}
+
+/* Navigation links */
+.high-contrast .nav-link {
+    color: #ffffff !important;
+}
+
+.high-contrast .nav-link:hover,
+.high-contrast .nav-link.active {
+    color: #ffff00 !important;
+}
+
+/* Footer links */
+.high-contrast .footer-links a {
+    color: #ffffff !important;
+}
+
+.high-contrast .footer-links a:hover {
+    color: #ffff00 !important;
+}
+
+/* Form elements */
+.high-contrast input,
+.high-contrast textarea,
+.high-contrast select {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 2px solid #000000 !important;
+}
+
+.high-contrast input:focus,
+.high-contrast textarea:focus,
+.high-contrast select:focus {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 3px solid #0000ff !important;
+}
+
+/* Special elements that need specific high contrast treatment */
+.high-contrast .hero-title,
+.high-contrast .page-title {
+    color: #ffffff !important;
+}
+
+.high-contrast .section-title {
+    color: #000000 !important;
+}
+
+.high-contrast .service-title,
+.high-contrast .job-title {
+    color: #000000 !important;
+}
+
+.high-contrast .service-description,
+.high-contrast .job-description p {
+    color: #000000 !important;
+}
+
+/* Images and icons */
+.high-contrast img {
+    filter: contrast(200%) brightness(150%) !important;
+}
+
+.high-contrast .service-icon img {
+    filter: invert(1) contrast(200%) !important;
+}
+
+/* Remove gradients and shadows in high contrast */
+.high-contrast * {
+    background-image: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+/* Ensure borders are visible */
+.high-contrast .service-card:hover,
+.high-contrast .job-card:hover {
+    border: 3px solid #000000 !important;
+}
+
+/* Contact items */
+.high-contrast .contact-item {
+    color: #ffffff !important;
+}
+
+.high-contrast .contact-item i {
+    color: #ffffff !important;
+}
+
+/* Breadcrumb */
+.high-contrast .breadcrumb,
+.high-contrast .breadcrumb a {
+    color: #ffffff !important;
+}
+
+/* Keep accessibility toolbar completely separate from high contrast effects */
+
+.high-contrast .accessibility-toggle {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5) !important;
+    filter: none !important;
+}
+
+.high-contrast .accessibility-toggle:hover {
+    background: #333333 !important;
+    color: #ffffff !important;
+}
+
+.high-contrast .accessibility-options {
+    background: #000000 !important;
+    border: 2px solid #ffffff !important;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3) !important;
+    filter: none !important;
+}
+
+.high-contrast .accessibility-btn {
+    color: #ffffff !important;
+    background: transparent !important;
+}
+
+.high-contrast .accessibility-btn:hover {
+    background: #333333 !important;
+    color: #ffffff !important;
 }
 
 .large-font {
@@ -1931,4 +2128,93 @@ section {
     .section-title {
         page-break-after: avoid;
     }
+}
+
+/* Jobs Loading and Error States */
+.loading-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+.loading-message i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    animation: spin 1s linear infinite;
+}
+
+.loading-message p {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.no-jobs-message,
+.error-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    grid-column: 1 / -1;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    border: 2px dashed var(--border-color);
+}
+
+.no-jobs-message i,
+.error-message i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.no-jobs-message i {
+    color: var(--text-light);
+}
+
+.error-message i {
+    color: var(--error-color);
+}
+
+.no-jobs-message h3,
+.error-message h3 {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.no-jobs-message p,
+.error-message p {
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.retry-btn {
+    background: var(--primary-color);
+    color: var(--text-white);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: var(--text-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.retry-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
