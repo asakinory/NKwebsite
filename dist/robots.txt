@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nuritkinory.co.il/sitemap.xml
