@@ -366,6 +366,15 @@
       if (employerRadio) employerRadio.checked = true;
     }
 
+    var status = $("#form-status");
+    var via = "mail";
+
+    $all("[data-send-via]", form).forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        via = btn.getAttribute("data-send-via");
+      });
+    });
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       if (!form.checkValidity()) {
@@ -400,20 +409,31 @@
       if (audience !== "employer") {
         lines.push("* קורות החיים מצורפים להודעה זו.");
       }
+      var body = lines.join("\n");
 
-      var href =
-        "mailto:" + to +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(lines.join("\n"));
+      var opened;
+      if (via === "gmail") {
+        var gmail =
+          "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(to) +
+          "&su=" + encodeURIComponent(subject) +
+          "&body=" + encodeURIComponent(body);
+        opened = window.open(gmail, "_blank");
+        if (opened) opened.opener = null;
+      } else {
+        window.location.href =
+          "mailto:" + to +
+          "?subject=" + encodeURIComponent(subject) +
+          "&body=" + encodeURIComponent(body);
+        opened = true;
+      }
 
-      window.location.href = href;
-
-      var status = $("#form-status");
       if (status) {
-        status.textContent =
-          audience === "employer"
-            ? "תוכנת הדואר נפתחה עם הפנייה מוכנה לשליחה אל " + to
-            : "תוכנת הדואר נפתחה. אנא צרפו את קובץ קורות החיים ושלחו אל " + to;
+        var where = via === "gmail" ? "Gmail נפתח בחלון חדש" : "תוכנת הדואר נפתחה";
+        status.textContent = !opened
+          ? "הדפדפן חסם את פתיחת החלון. אפשרו חלונות קופצים או שלחו ישירות אל " + to
+          : audience === "employer"
+            ? where + " עם הפנייה מוכנה לשליחה אל " + to
+            : where + ". אנא צרפו את קובץ קורות החיים ושלחו אל " + to;
       }
     });
   }

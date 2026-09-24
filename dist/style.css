@@ -1248,6 +1248,12 @@ ol {
   font-size: 0.95rem;
 }
 
+.form-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
 .form-status {
   font-weight: 700;
   color: var(--color-success);
