@@ -27,6 +27,18 @@
       .replace(/"/g, "&quot;");
   }
 
+  /* Page parameters travel in the hash (#cat=x, #job=6) so they work on any
+     static host; a query string (?cat=x) is accepted too. */
+  function pageParams() {
+    var hash = window.location.hash.replace(/^#/, "");
+    var params = new URLSearchParams(hash.indexOf("=") !== -1 ? hash : "");
+    var search = new URLSearchParams(window.location.search);
+    search.forEach(function (v, k) {
+      if (!params.has(k)) params.set(k, v);
+    });
+    return params;
+  }
+
   /* ------------------------------------------------------------------
      Mobile navigation
      ------------------------------------------------------------------ */
@@ -189,7 +201,7 @@
       ? ""
       : '<details><summary>דרישות התפקיד</summary><ul>' + reqs + "</ul></details>";
 
-    var applyHref = "contact.html?job=" + encodeURIComponent(job.id);
+    var applyHref = "contact.html#job=" + encodeURIComponent(job.id);
 
     return (
       '<article class="job-card" data-category="' + escapeHtml(job.category) + '">' +
@@ -236,7 +248,7 @@
     var activeCat = "all";
     var query = "";
 
-    var params = new URLSearchParams(window.location.search);
+    var params = pageParams();
     var catParam = params.get("cat");
     if (catParam && window.NK_CATEGORIES[catParam]) activeCat = catParam;
 
@@ -306,9 +318,7 @@
         $all(".chip", chipsHost).forEach(function (c) {
           c.setAttribute("aria-pressed", c === chip ? "true" : "false");
         });
-        var url = new URL(window.location.href);
-        if (activeCat === "all") url.searchParams.delete("cat");
-        else url.searchParams.set("cat", activeCat);
+        var url = window.location.pathname + (activeCat === "all" ? "" : "#cat=" + activeCat);
         window.history.replaceState(null, "", url);
         render();
       });
@@ -332,7 +342,7 @@
     var form = $("#contact-form");
     if (!form) return;
 
-    var params = new URLSearchParams(window.location.search);
+    var params = pageParams();
     var jobId = params.get("job");
     var type = params.get("type");
     var subjectInput = $("#subject", form);
